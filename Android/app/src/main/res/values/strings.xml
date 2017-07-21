@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">SmartCalc</string>
+    <string name="student">Student</string>
+    <string name="teacher">Teacher</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="back_to_calc">Back To Calc</string>
+    <string name="forgotpassword">Forgot Password?</string>
+    <string name="savepassword">Save Password</string>
+    <string name="keepmeloggedin">Keep me logged in</string>
+    <string name="backtocalc">Back to Calc</string>
+    <string name="signup">No account? Sign Up!</string>
+
+
+
+</resources>
