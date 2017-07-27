@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    tools:context="com.student.smartcalcapp.LoginActivity">
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.04"
+        tools:layout_editor_absoluteY="23dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/app_name"
+        style="@style/TextStylePrimary.AppName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="@string/app_name"
+        android:textColorHint="@color/colorPrimaryDark"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+    <Button
+        android:id="@+id/b_teacher"
+        style="@style/CustomButtonStyle"
+        android:layout_marginStart="48dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/teacher"
+        app:layout_constraintEnd_toStartOf="@id/b_student"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/b_student"
+        app:layout_constraintTop_toBottomOf="@+id/app_name"
+        app:layout_constraintBottom_toTopOf="@+id/input_layout_email"
+        android:layout_marginLeft="48dp"
+        android:enabled="false"/>
+
+    <Button
+        android:id="@+id/b_student"
+        style="@style/CustomButtonStyle"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/student"
+        app:layout_constraintLeft_toRightOf="@+id/b_teacher"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_name"
+        app:layout_constraintBottom_toTopOf="@+id/input_layout_email"
+        android:layout_marginRight="48dp"
+        android:enabled="true"/>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="48dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/edit_textbox_style"
+        app:layout_constraintBottom_toBottomOf="@+id/input_layout_password"
+        app:layout_constraintLeft_toLeftOf="@+id/b_teacher"
+        app:layout_constraintRight_toRightOf="@+id/b_student"
+        app:layout_constraintTop_toBottomOf="@+id/app_name">
+
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:paddingBottom="10dp"
+            android:textAppearance="@style/TextStylePrimary"
+            android:textColorHint="@color/colorAccent" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="48dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edit_textbox_style"
+        app:layout_constraintLeft_toLeftOf="@+id/b_teacher"
+        app:layout_constraintRight_toRightOf="@+id/b_student"
+        app:layout_constraintTop_toBottomOf="@+id/input_layout_email">
+
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:paddingBottom="10dp"
+            android:textAppearance="@style/TextStylePrimary"
+            android:textColorHint="@color/colorAccent" />
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_forgot_password"
+        android:text="@string/forgotpassword"
+        style="@style/TextStylePrimary.ForgotPassword"
+        app:layout_constraintTop_toBottomOf="@+id/input_layout_password"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:id="@+id/b_signin"
+        style="@style/CustomButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="48dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="20dp"
+        android:background="#4285F4"
+        android:elegantTextHeight="false"
+        android:text="@string/signin"
+        android:textAllCaps="false"
+        android:textColor="@color/cast_expanded_controller_progress_text_color"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/b_g_signin"
+        app:layout_constraintLeft_toLeftOf="@+id/input_layout_email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_forgot_password" />
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/b_g_signin"
+        style="@style/CustomButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
+        android:layout_marginTop="20dp"
+        android:background="#4285F4"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:text="@string/google"
+        app:buttonSize="standard"
+        app:colorScheme="dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toRightOf="@+id/input_layout_email"
+
+        app:layout_constraintStart_toEndOf="@id/b_signin"
+        app:layout_constraintTop_toBottomOf="@+id/tv_forgot_password"
+        tools:colorScheme="@color/colorPrimaryDark" />
+
+
+    <Button
+        android:id="@+id/b_backto_calc"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/if_calculatorsvg_1579791"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/b_signin" />
+    <TextView
+        android:id="@+id/tv_sigup"
+        android:text="@string/signup"
+        style="@style/TextStylePrimary.ForgotPassword"
+        app:layout_constraintTop_toBottomOf="@+id/b_backto_calc"
+        android:layout_marginTop="10dp"/>
+
+</android.support.constraint.ConstraintLayout>

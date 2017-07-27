@@ -15,6 +15,7 @@
         <item name="android:textSize">20sp</item>
         <item name="android:textColor">@android:color/white</item>
     </style>
+
     <style name="TextStylePrimary.AppName">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -38,11 +39,16 @@
         <item name="android:gravity">center</item>
         <item name="android:textSize">20sp</item>
     </style>
+
     <style name="TextStylePrimary.ForgotPassword">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:gravity">center</item>
         <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="TextAppearence.App.TextInputLayout" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/colorAccent</item>
     </style>
 
     <style name="TextStylePrimary.SavePassword">
@@ -57,6 +63,16 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:gravity">center</item>
         <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme.NavigationSeperator" parent = "Widget.Design.NavigationView">
+       <item name="android:listDivider">@color/colorPrimaryDark</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:dividerPadding">50dp</item>
     </style>
 
 </resources>

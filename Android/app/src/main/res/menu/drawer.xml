@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/g_joinclass"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/join_class"
+            android:checked="false"
+            android:icon="@mipmap/ic_join_class"
+            android:title="Join Class" />
+    </group>
+    <group
+        android:id="@+id/g_jointest"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/join_test"
+            android:checked="false"
+            android:icon="@mipmap/ic_join_test"
+            android:title="Join Test" />
+
+    </group>
+    <group
+        android:id="@+id/g_settings"
+        android:checkableBehavior="single">
+
+    <item
+        android:id="@+id/settings"
+        android:checked="false"
+        android:title="Settings"
+        android:titleCondensed="@string/action_settings"
+        app:showAsAction="collapseActionView"
+        android:checkable="false">
+    </item>
+    </group>
+
+            <group
+                android:id="@+id/g_signin"
+                android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/sign_in"
+                    android:checked="false"
+                    android:icon="@drawable/cast_abc_scrubber_control_to_pressed_mtrl_005"
+                    android:title="Sign In" />
+            </group>
+
+            <group
+                android:id="@+id/g_about"
+                android:checkableBehavior="single">
+                <item
+                    android:id="@+id/about"
+                    android:checkable="false"
+                    android:checked="false"
+                    android:icon="@android:drawable/ic_menu_info_details"
+                    android:title="About/Feedback"
+                    tools:icon="@drawable/cast_abc_scrubber_control_to_pressed_mtrl_005" />
+            </group>
+            <group
+                android:id="@+id/g_contact"
+                android:checkableBehavior="single">
+                <item
+
+                    android:checked="false"
+                    android:icon="@mipmap/ic_contact"
+                    android:title="Contact"/>
+            </group>
+
+
+</menu>
